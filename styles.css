@@ -1,6 +1,8 @@
 body, html{
   height:100%;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: url('images/PrideRock.jpg');
+  background-size: cover;
 }
 body{
   margin: 0px;
@@ -26,9 +28,5 @@ a:hover{
   background-color: #777;
 }
 .dancer{
-  border: 10px solid rgb(245, 112, 112);
   position: absolute;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
 }
