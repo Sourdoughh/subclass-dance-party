@@ -1,32 +1,71 @@
-body, html{
-  height:100%;
+body, html {
+  height: 100%;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: url('images/PrideRock.jpg');
+  background: url('images/PrideRock.jpg') no-repeat center;
   background-size: cover;
+  overflow-x: hidden;
 }
-body{
-  margin: 0px;
+
+body {
+  margin: 0;
   background-color: #222;
-  font-size: 18px;
+  font-size: 0.9em;
 }
-body, a:link, a:visited, a:active{
-  color: lightblue;
+
+a:link, a:visited, a:active {
+  color: #fff;
+  background: rgb(163, 56, 133);
   text-decoration: none;
+  padding: 0.5em 0.8em;
+  display: block;
+  -webkit-box-shadow: 1px 2px 2px rgb(81, 12, 62);
+  -moz-box-shadow: 1px 2px 2px rgb(81, 12, 62);
+  box-shadow: 1px 2px 2px rgb(81, 12, 62);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
+
 a:hover{
-  opacity: 0.8;
+  background: rgb(178, 57, 144);
 }
-.title, .addDancerButton{
-  padding: 5px 12px;
-  float: right;
+
+.title {
+  color: #fff;
+  font-size: 2.5em;
+  margin: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 2px rgb(81, 12, 62);
 }
-.topbar{
-  height: 32px;
-  background-color: #555;
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
 }
-.title{
-  background-color: #777;
+
+.topbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 1em;
 }
-.dancer{
+
+.topbar-list {
+  display: table;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topbar-item {
+  display: block;
+  float: left;
+  padding: 1em;
+  text-align: center;
+}
+
+.dancer {
   position: absolute;
 }

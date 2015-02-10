@@ -3,21 +3,52 @@
   <head>
     <title>Object Dance Party</title>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="animate.css" />
+  </head>
+  <body>
+    <div class="topbar clearfix" id="bar">
+      <p class="title">object dance party</p>
+      <ul class="topbar-list clearfix">
+        <li class="topbar-item">
+          <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">
+            add a blinky dancer
+            <span class="fa fa-spinner"></span>
+          </a>
+        </li>
+        <li class="topbar-item">
+          <a href="#" class="addDancerButton" data-dancer-maker-function-name="PopDancer">
+            add a pop dancer
+            <span class="fa fa-music"></span>
+          </a>
+        </li>
+        <li class="topbar-item">
+          <a href="#" class="addDancerButton" data-dancer-maker-function-name="FightingDancer">
+            add a fighting dancer
+            <span class="fa fa-shield"></span>
+          </a>
+        </li>
+        <li class="topbar-item">
+          <a href="#" id="lineUp">
+            line up (left)
+            <span class="fa fa-align-left"></span>
+          </a>
+        </li>
+        <li class="topbar-item">
+          <a href="#" id="lineUp">
+            line up (right)
+            <span class="fa fa-align-right"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.easing.compatibility.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/popDancer.js"></script>
     <script src="src/fightingDancer.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="PopDancer">add a pop dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="FightingDancer">add a fighting dancer</a>
-    </div>
     <script src="src/init.js"></script>
   </body>
 </html>

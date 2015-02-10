@@ -13,7 +13,7 @@ describe('fightingDancer', function() {
     expect(fightingDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that adds the tada class', function() {
+  it('should have a step function that adds a class', function() {
     sinon.spy(fightingDancer.$node, 'addClass');
     fightingDancer.step();
     expect(fightingDancer.$node.addClass.called).to.be.true;
