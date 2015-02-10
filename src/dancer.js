@@ -18,9 +18,12 @@ Dancer.prototype.step = function(){
 };
 
 Dancer.prototype.setPosition = function(top, left) {
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+
   var styleSettings = {
-    top: top,
-    left: left
+    top: Math.abs(windowHeight - top),
+    left: Math.abs(windowWidth - left)
   };
   this.$node.css(styleSettings);
 };
