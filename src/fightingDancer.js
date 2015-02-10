@@ -1,4 +1,4 @@
-var PopDancer = function(top, left, timeBetweenSteps){
+var FightingDancer = function(top, left, timeBetweenSteps){
   // this.oldStep refers to Dancer's step
   // This must be set before subclassing Dancer,
   // because any properties set after Dancer.call()
@@ -8,10 +8,10 @@ var PopDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
 };
 
-PopDancer.prototype = Object.create(Dancer.prototype);
-PopDancer.prototype.constructor = PopDancer;
+FightingDancer.prototype = Object.create(Dancer.prototype);
+FightingDancer.prototype.constructor = FightingDancer;
 
-PopDancer.prototype.step = function(){
+FightingDancer.prototype.step = function(){
   this.oldStep();
   this.$node.toggle();
 };

@@ -1,27 +1,34 @@
 body, html{
   height:100%;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color: #222;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
+}
+a:hover{
+  opacity: 0.8;
 }
 .title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+  padding: 5px 12px;
+  float: right;
 }
 .topbar{
-  height:32px;
+  height: 32px;
   background-color: #555;
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  border: 10px solid rgb(245, 112, 112);
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
