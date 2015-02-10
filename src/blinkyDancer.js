@@ -1,11 +1,11 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   // this.oldStep refers to Dancer's step
   // This must be set before subclassing Dancer,
-  // because the Dancer.call() line will prevent
-  // the subclassed object from taking
-  // any other properties.
-  this.oldStep = Dancer.prototype.step;
+  // because any properties set after Dancer.call()
+  // will not be saved as part of the subclassed object.
 
+  console.log(this);
+  this.oldStep = Dancer.prototype.step;
   Dancer.apply(this, arguments);
 };
 
