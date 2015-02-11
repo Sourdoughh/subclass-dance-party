@@ -6,7 +6,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
 
   this.animal = this.chooseAnimal();
-  this.$node = $('<img src="images/' + this.animal + '.png" class="dancer"/>');
+  this.$node = $('<div class="dancer"><img src="images/' + this.animal + '.png"/></div>');
   this.step();
   this.setPosition(top, left);
 };
@@ -18,12 +18,15 @@ Dancer.prototype.step = function(){
 };
 
 Dancer.prototype.setPosition = function(top, left) {
-  var windowWidth = $(window).width();
-  var windowHeight = $(window).height();
-
+  var barHeight = $('#bar').height();
+  if(top < barHeight){
+    top += barHeight;
+  }
+  // var windowWidth = $(window).width();
+  // var windowHeight = $(window).height();
   var styleSettings = {
-    top: Math.abs(windowHeight - top),
-    left: Math.abs(windowWidth - left)
+    top: top,
+    left: left
   };
   this.$node.css(styleSettings);
 };
